@@ -1,0 +1,71 @@
+POST  http://localhost:8080/api/pedido/crear
+{
+    "usuarioId": 2,
+    "librosIds": [1, 3],
+    "estado": "pendiente",
+    "fecha": "2024-11-27"
+}
+
+GET http://localhost:8080/api/pedido/traer
+
+GET http://localhost:8080/api/pedido/traer/5
+
+DELETE http://localhost:8080/api/pedido/eliminar/1
+
+
+
+LIBROS:
+
+POST  http://localhost:8080/api/libro/crear
+{
+  "titulo" : "El Eternauta",
+  "autor" : "Héctor Germán Oesterheld",
+  "genero" : "Historieta, Novela gráfica",
+  "precio" :45000 ,
+  "stock": 25
+}
+POST http://localhost:8080/api/libro/crear
+{
+  "titulo": "Don Quijote de la Mancha",
+  "autor": "Miguel de Cervantes",
+  "genero": "Novela",
+  "precio": 1800,
+  "stock": 15
+}
+
+GET http://localhost:8080/api/libro/traer
+
+GET http://localhost:8080/api/libro/traer/1
+
+DELETE http://localhost:8080/api/libro/eliminar/2
+
+PUT http://localhost:8080/api/libro/editar/3
+{
+  "titulo": "Don Quijote de la Mancha",
+  "autor": "Miguel de Cervantes",
+  "genero": "Novela",
+  "precio": 1800,
+  "stock": 35
+}
+
+USUARIOS:
+
+POST  http://localhost:8080/api/usuario/crear
+{
+  "nombre":"Juan Gimenez",
+  "email": "juancito165@gmail.com",
+  "contrasenia":"juanGimenez123"
+}
+
+POST  http://localhost:8080/api/usuario/crear
+{
+  "nombre":"Maria Marcos",
+  "email": "lamari65@gmail.com",
+  "contrasenia":"mariMarcoz123"
+}
+
+GET http://localhost:8080/api/usuario/traer
+
+GET http://localhost:8080/api/usuario/traer/1
+
+DELETE http://localhost:8080/api/usuario/eliminar/1

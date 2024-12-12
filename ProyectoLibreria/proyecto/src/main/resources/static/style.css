@@ -1,0 +1,429 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    padding-top: 70px;
+
+}
+
+
+/* Estilos para la navbar  */
+.navbar {
+    background: linear-gradient(to right, #06acb8, #034f84);
+    position: fixed;  
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    transition: all 0.3s ease;  
+}
+
+
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    transition: font-size 0.3s ease; 
+}
+
+.nav-link {
+    font-size: 18px;
+    white-space: normal; 
+    transition: transform 0.3s;
+}
+
+.nav-link:hover {
+    color: white; 
+    transform: scale(1.1);
+}
+
+
+/* Estilos del carrusel */
+/* General: Configuración del contenedor del Swiper */
+/* .swiper-container {
+    width: 100%;
+    height: 600px; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Configuración de las imágenes dentro del carrusel */
+/* .swiper-slide img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Ajuste para que no se distorsione la imagen */
+
+
+/* Configuración para los slides */
+/* .swiper-slide {
+    position: relative; /* Necesario para posicionar elementos hijos con absolute 
+    height: 100%; /* Altura del slide igual al contenedor del carrusel 
+*/
+
+/* Contenedor del texto en la parte inferior */
+.text-container {
+    position: absolute; /* Posiciona el texto en relación al slide */
+    bottom: 0; /* Fija el texto en la parte inferior */
+    width: 100%; /* Abarca el ancho completo del slide */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color del texto en blanco */
+    padding: 15px 20px; /* Espaciado interno para el texto */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+/* Títulos del texto (h5) */
+/* .text-container h5 {
+    margin: 0; /* Elimina márgenes adicionales 
+    font-size: 1.8rem; /* Ajusta el tamaño del título 
+    line-height: 1.2; /* Espaciado entre líneas del título 
+} */
+
+/* Párrafos del texto (p) */
+/* .text-container p {
+    margin: 10px 0 0; /* Añade margen superior entre el párrafo y el título 
+    font-size: 1rem; /* Ajusta el tamaño del párrafo 
+    line-height: 1.5; /* Mejora la legibilidad del texto 
+} */
+
+/* Botones de navegación del Swiper */
+/* .swiper-button-prev, .swiper-button-next {
+    color: white; /* Color de los botones 
+    opacity: 0.8; /* Botones ligeramente transparentes 
+    transition: opacity 0.3s ease; /* Transición suave al pasar el mouse 
+} */
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    opacity: 1; /* Mayor visibilidad al pasar el mouse */
+}
+
+/* Paginación del Swiper */
+.swiper-pagination {
+    bottom: 10px; /* Alinea la paginación en la parte inferior */
+}
+
+.swiper-pagination-bullet {
+    background: white; /* Color de los indicadores */
+    opacity: 0.7; /* Ligera transparencia */
+}
+
+.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 1); /* Indicador activo más visible */
+}
+
+
+/* Ajustes para el buscador */
+
+.search-bar {
+    position: relative; /* Para posicionar el botón dentro del contenedor */
+    width: 100%;
+    max-width: 300px; /* Ancho máximo ajustable */
+    margin: 0;
+}
+
+/* Estilo del campo de búsqueda */
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    padding-right: 40px; /* Espacio para el botón */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+}
+
+/* Botón con la lupa */
+.search-button {
+    position: absolute; /* Para colocarlo dentro del contenedor */
+    right: 10px; /* Separación del borde derecho */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+    transition: transform 0.4s;
+}
+
+.search-button:hover {
+    color: #333;
+}
+
+.search-button:active {
+    transform: rotate(360deg);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #034f84, #06acb8);
+    color: white;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer a {
+    transition: color 0.3s ease-in-out;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .bi {
+    font-size: 1.5rem;
+}
+
+footer .bi:hover {
+    color: #f8f9fa;
+}
+
+/* Botón de Login */
+.btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #343a40;
+}
+
+
+/* seccion de servicio */
+
+#servicios {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #06acb8;
+    margin-bottom: 40px;
+}
+
+/* Estilo de cada card de servicio */
+.service-card {
+    background: linear-gradient(180deg, #6a89cc, #06acb8);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #06ACB8;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.service-card i {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-color: #048596; /* Cambio de color de borde al hacer hover */
+}
+
+.service-card h4 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* Sección de Contacto */
+
+#contacto {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Fondo suave */
+    padding: 60px 20px; 
+}
+
+/* Encabezado */
+#contacto h2 {
+    font-size: 2.5rem;
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Estilo general del contenedor */
+#contacto .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Formularios */
+#contacto form {
+    background: #ffffff; 
+    border: 1px solid #ced4da; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Campos del formulario */
+#contacto form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Botón de Enviar */
+#contacto form .btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+#contacto form .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Información de Contacto */
+#contacto .col-md-6 h4 {
+    font-size: 1.25rem;
+    color: #495057;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#contacto .col-md-6 p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+/* Mapa */
+#contacto iframe {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    margin-top: 20px;
+}
+
+/* Sección de Nosotros */
+#nosotros h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#nosotros h3 {
+    font-size: 1.75rem;
+    margin-top: 20px;
+}
+
+#nosotros p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+#nosotros ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#nosotros ul li {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+#nosotros img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+#nosotros h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    border-left: 2px solid #007bff;
+    padding-left: 20px;
+    position: relative;
+}
+.timeline-item {
+    margin-bottom: 20px;
+}
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+:root {
+    --primary-color: #06ACB8;
+    --secondary-color: #048596;
+    --light-color: #f8f9fa;
+}
+
+.swiper-container .swiper-slide img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 300px; /* Ajusta la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área del contenedor */
+}
